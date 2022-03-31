@@ -1,0 +1,108 @@
+---
+title: "Impacts from Covid-19"
+author: 
+  - Qiuhan Wang
+thanks: "Code and data are available at: https://github.com/wangq166/starter_folder.git."
+date: "`r format(Sys.time(), '%d %B %Y')`"
+abstract: "Covid-19 is considered a highly contagious and hard to prevent virus and it breakouts in 2019, which profoundly influenced global economics and peoples’ lives. Provincial Case & Contact Management System provides confirmed cases numbers and extra information. To help the government and citizens control the spread of the virus, we analyze the characteristics of people who are more likely to be infected and how do they be infected. We find that covid-19 can infect people of any age, and their main infected resource is traveling, but it brings more severe results to the elder. "
+keywords: "Covid-19, source of infection, impact on health, prevent virus"
+output:
+  bookdown::pdf_document2
+toc: FALSE
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+# Introduction
+
+Covid-19 is an infectious disease caused by the SARS-Cov-2 virus. The virus can spread from an infected person’s mouth or nose in small liquid particles when they cough, speak or breathe. It has been an outbreak since 2019, which influences both global economic systems and peoples’ lives. According to the statistics, over 479 million people have been infected by the virus, and 6 million people died because of Covid-19. In addition, Covid-19-related lockdowns were very common during 2020-2021, which impacted economic activities directly. Most nations experienced the most significant hit to their gross domestic product(GDP) growth. In the paper, we aim to help the government publish some measures to control the spread of the virus and prevent covid-19. We summarize the characteristics of the patients who have been confirmed or probably infected by the virus in Toronto since January in 2020 and find the impact of the virus on the healthy condition of a different group of people. 
+The data was extracted from the provincial Case & Contact Management System(CCM). This data set contains demographic, geographic, and severity information for all confirmed and probable cases reported to and managed by Toronto Public Health since January 2020. The data includes the cases that occur in the community and outbreaks. The results conclude that most patients can recover without any special treatment, but older people are more likely to develop the severe illness than young persons. Also, we find that the primary source of infection is traveling, and their outbreak-associated is sporadic.
+The article is constructed as follows. First, we introduce the dataset, including data resources, data collection methods, and variables in data. Second, we divide people who are infected into different groups based on their age and gender to find who is more likely to be infected. Also, we discuss the source of infection and patients’ state of illness. Finally, some suggestions are provided to the government and people to prevent covid-19.
+
+
+
+# Data
+
+Our data is of penguins (Figure \@ref(fig:bills)).
+
+```{r bills, fig.cap="Bills of penguins", echo = FALSE}
+ggplot(penguins, aes(x = island, fill = species)) +
+  geom_bar(alpha = 0.8) +
+  scale_fill_manual(values = c("darkorange","purple","cyan4"),
+                    guide = FALSE) +
+  theme_minimal() +
+  facet_wrap(~species, ncol = 1) +
+  coord_flip()
+```
+
+Talk more about it.
+
+Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)
+
+```{r billssssss, fig.cap="More bills of penguins", echo = FALSE, fig.width=8, fig.height=4}
+
+# This needs to be about the random data tha tI sasmpled?
+ggplot(penguins, aes(x = island, fill = species)) +
+  geom_bar(alpha = 0.8) +
+  scale_fill_manual(values = c("darkorange","purple","cyan4"),
+                    guide = FALSE) +
+  theme_minimal() +
+  facet_wrap(~species, ncol = 1) +
+  coord_flip()
+```
+
+Talk way more about it. 
+
+
+
+# Model
+
+\begin{equation}
+Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}  (\#eq:bayes)
+\end{equation}
+
+Equation \@ref(eq:bayes) seems useful, eh?
+
+Here's a dumb example of how to use some references: In paper we run our analysis in `R` [@citeR]. We also use the `tidyverse` which was written by @thereferencecanbewhatever If we were interested in baseball data then @citeLahman could be useful. 
+
+We can use maths by including latex between dollar signs, for instance $\theta$.
+
+
+# Results
+
+# Discussion
+
+## First discussion point
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional details
+
+
+\newpage
+
+
+# References
+
+
