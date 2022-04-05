@@ -1,8 +1,9 @@
 ---
 title: "Impacts from Covid-19"
+subtitle: "The characteristics of people who infected by Covid-19 in Toronto since 2020"
 author: 
   - Qiuhan Wang
-thanks: "Code and data are available at: https://github.com/wangq166/starter_folder.git."
+thanks: "Code and data are available at: https://github.com/wangq166/Covid-19-Research.git"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 abstract: "Covid-19 is considered a highly contagious and hard to prevent virus and it breakouts in 2019, which profoundly influenced global economics and peoples’ lives. Provincial Case & Contact Management System provides confirmed cases numbers and extra information. To help the government and citizens control the spread of the virus, we analyze the characteristics of people who are more likely to be infected and how do they be infected. We find that covid-19 can infect people of any age, and their main infected resource is traveling, but it brings more severe results to the elder. "
 keywords: "Covid-19, source of infection, impact on health, prevent virus"
@@ -28,6 +29,10 @@ The article is constructed as follows. First, we introduce the dataset, includin
 
 
 # Data
+## Data collection
+## Data processing
+##Population and sample
+##Results
 
 Our data is of penguins (Figure \@ref(fig:bills)).
 
