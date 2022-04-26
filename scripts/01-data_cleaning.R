@@ -1,36 +1,27 @@
 #### Preamble ####
-# Purpose: Clean the survey data downloaded from [...UPDATE ME!!!!!]
-# Author: Rohan Alexander [CHANGE THIS TO YOUR NAME!!!!]
-# Data: 3 January 2021
-# Contact: rohan.alexander@utoronto.ca [PROBABLY CHANGE THIS ALSO!!!!]
+# Purpose: Clean the data downloaded from "Turkey: DHS, 1998 - Final Report"
+# Author: Qiuhan Wang
+# Data: 17 April 2022
+# Contact: qiuhan.wang@mail.utoronto.ca 
 # License: MIT
-# Pre-requisites: 
-# - Need to have downloaded the ACS data and saved it to inputs/data
-# - Don't forget to gitignore it!
-# - Change these to yours
-# Any other information needed?
+
+
 
 
 #### Workspace setup ####
-# Use R Projects, not setwd().
-library(haven)
+
+# Load all the packages
+library(reshape2)
+library(stringi)
+library(pointblank)
 library(tidyverse)
-# Read in the raw data. 
-raw_data <- readr::read_csv("inputs/data/raw_data.csv"
-                     )
-# Just keep some variables that may be of interest (change 
-# this depending on your interests)
-names(raw_data)
 
-reduced_data <- 
-  raw_data %>% 
-  select(first_col, 
-         second_col)
-rm(raw_data)
-         
+#import data from inputs folder and name it as Covid_19.csv
+Covid_19 <- read.csv("inputs/data/Covid_19.csv")
 
-#### What's next? ####
+#filter the blank in the column "Age_Group" and rename the new data as raw_data2
+raw_data2 <- Covid_19 %>%
+  filter(`Age_Group` != "")
 
-
-
-         
+#save the document as cleaned_data.csv in data section of inputs
+write_csv(raw_data2,"inputs/data/cleaned_data.csv")
